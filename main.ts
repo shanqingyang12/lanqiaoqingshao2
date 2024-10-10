@@ -571,7 +571,7 @@ namespace lanqiaoqingshao {
      * @param dht11pin describe parameter here, eg: DigitalPin.P15
      */
     //% blockId="readdht11" block="获取%dht11type|在%dht11pin"
-    //% weight=70 blockGap=8
+    //% weight=70 blockGap=8    
     //% subcategory=DHT11
     export function dht11value(dht11type: DHT11Type, dht11pin: DigitalPin): number {
         const DHT11_TIMEOUT = 100
@@ -1722,7 +1722,7 @@ namespace lanqiaoqingshao {
      * @param unit describe parameter here ,eg:PingUnit.Centimeters
      */
     //% subcategory=超声波
-    //% blockId=ultrasonic_sensor block="获取超声波数据  | Trig %trig| Echo %echo| 数据单位 %unit"
+    //% blockId=ultrasonic_sensor block="获取超声波数据Trig%trig|Echo%echo数据单位 %unit"
     //% weight=90  blockGap=8
     export function ping(trig:DigitalPin, echo:DigitalPin, unit: PingUnit, maxCmDistance = 600): number {
         // send pulse
