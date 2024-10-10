@@ -973,11 +973,10 @@ namespace lanqiaoqingshao {
 
     /**
      * 创建驱动灯条
-     * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      * @param pin describe parameter here, eg: DigitalPin.P12                  
      */
-    //% blockId="neopixel_create" block="引脚%pin|灯珠个数%numleds|显示模式%mode"
+    //% blockId="neopixel_create" block="引脚 %pin |灯珠个数 %numleds|显示模式%mode"
     //% weight=90 blockGap=8
     //% subcategory=WS2812B
     //% blockSetVariable=strip
@@ -1550,10 +1549,7 @@ namespace lanqiaoqingshao {
        */
     //% subcategory=红外遥控
     //% blockId="makerbit_infrared_connect_receiver"
-    //% block="红外接收器引脚 %pin|设置解码方式为%protocol|"
-    //% pin.fieldEditor="gridpicker"
-    //% pin.fieldOptions.columns=4
-    //% pin.fieldOptions.tooltips="false"
+    //% block="红外接收器引脚 %pin|设置解码方式为%protocol"
     //% weight=90 blockGap=8
     export function connectIrReceiver(
         pin: DigitalPin,
@@ -1728,7 +1724,7 @@ namespace lanqiaoqingshao {
     //% subcategory=超声波
     //% blockId=ultrasonic_sensor block="获取超声波数据  | Trig %trig| Echo %echo| 数据单位 %unit"
     //% weight=90  blockGap=8
-    export function ping(trig: DigitalPin, echo: DigitalPin, unit: PingUnit, maxCmDistance = 600): number {
+    export function ping(trig=DigitalPin.P4, echo=DigitalPin.P6, unit: PingUnit, maxCmDistance = 600): number {
         // send pulse
         pins.setPull(trig, PinPullMode.PullNone);
         pins.digitalWritePin(trig, 0);
